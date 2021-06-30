@@ -53,7 +53,8 @@ class Ad(models.Model):
 
 class Slider(models.Model):
 	name= models.CharField(max_length=200)
-	rank = models.ImageField(upload_to='media')
+	rank = models.IntegerField()
+	status =models.BooleanField(choices=STATUS,default =False)
 	description =models.TextField(blank=True)
 
 	def __str__(sekf):
